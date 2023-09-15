@@ -6,7 +6,6 @@ CXXFLAGS := -Wall -Werror -Wextra -std=c++98 -MMD
 
 OBJ :=	main.o \
 		ClapTrap.o \
-		ScavTrap.o \
 		FragTrap.o \
 
 INCLUDES := -I.
