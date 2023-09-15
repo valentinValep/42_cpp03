@@ -19,13 +19,15 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 	_hitpointsMax = 100;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &src)
+ScavTrap::ScavTrap(const ScavTrap &src): ClapTrap(src)
 {
+	std::cout << "ScavTrap copy constructor called" << std::endl;
 	*this = src; // Assignment operator
 }
 
 ScavTrap::~ScavTrap()
 {
+	std::cout << "ScavTrap destructor called" << std::endl;
 	// Destructor
 }
 
@@ -55,5 +57,10 @@ void	ScavTrap::attack(std::string const &target)
 
 void	ScavTrap::guardGate()
 {
+	if (this->_hitpoints == 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " is dead and cannot enter in Gate keeper mode!" << std::endl;
+		return ;
+	}
 	std::cout << "ScavTrap " << this->_name << " has entered in Gate keeper mode." << std::endl;
 }
