@@ -7,7 +7,7 @@ int	main()
 	FragTrap	two("two");
 	FragTrap	defaultTrap;
 
-	one.highFivesGuys(); // guard gate
+	one.highFivesGuys(); // high five
 	one.attack("two"); // attack
 	two.takeDamage(10); // take damage
 	two.attack("one"); // attack
@@ -27,10 +27,10 @@ int	main()
 	two.attack("one"); // attack
 	two.attack("one"); // no energy points left
 	two.beRepaired(10); // no energy points left
-	two.highFivesGuys(); // guard gate
+	two.highFivesGuys(); // high five
 	two.takeDamage(100); // take damage and die
 	two.takeDamage(10); // is dead and cannot take damage
 	two.beRepaired(10); // is dead and cannot be repaired
 	two.attack("one"); // is dead and cannot attack
-	two.highFivesGuys(); // is dead and cannot guard gate
+	two.highFivesGuys(); // is dead and cannot high five
 }
