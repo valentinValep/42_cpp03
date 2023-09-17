@@ -4,19 +4,19 @@
 DiamondTrap::DiamondTrap(): ClapTrap(), ScavTrap(), FragTrap(), _name("default_diamond_name")
 {
 	std::cout << "DiamondTrap default constructor called" << std::endl;
-	_hitpoints = FragTrap::_hitpoints;
-	_energyPoints = ScavTrap::_energyPoints;
-	_attackDamage = FragTrap::_attackDamage;
-	this->_hitpointsMax = FragTrap::_hitpointsMax;
+	this->_hitpoints = FragTrap::_baseHitpoints;
+	this->_energyPoints = ScavTrap::_baseEnergyPoints;
+	this->_attackDamage = FragTrap::_baseAttackDamage;
+	this->_hitpointsMax = this->_hitpoints;
 }
 
 DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), _name(name)
 {
 	std::cout << "DiamondTrap constructor called" << std::endl;
-	_hitpoints = FragTrap::_hitpoints;
-	_energyPoints = ScavTrap::_energyPoints;
-	_attackDamage = FragTrap::_attackDamage;
-	this->_hitpointsMax = FragTrap::_hitpointsMax;
+	this->_hitpoints = FragTrap::_baseHitpoints;
+	this->_energyPoints = ScavTrap::_baseEnergyPoints;
+	this->_attackDamage = FragTrap::_baseAttackDamage;
+	this->_hitpointsMax = this->_hitpoints;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &src): ClapTrap(src), ScavTrap(src), FragTrap(src)

@@ -4,19 +4,19 @@
 FragTrap::FragTrap(): ClapTrap()
 {
 	std::cout << "FragTrap default constructor called" << std::endl;
-	this->_hitpoints = FT_DEFAULT_HP;
-	this->_energyPoints = FT_DEFAULT_EP;
-	this->_attackDamage = FT_DEFAULT_AD;
-	this->_hitpointsMax = FT_DEFAULT_HP;
+	this->_hitpoints = FragTrap::_baseHitpoints;
+	this->_energyPoints = FragTrap::_baseEnergyPoints;
+	this->_attackDamage = FragTrap::_baseAttackDamage;
+	this->_hitpointsMax = FragTrap::_baseHitpoints;
 }
 
 FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
 	std::cout << "FragTrap constructor called" << std::endl;
-	this->_hitpoints = FT_DEFAULT_HP;
-	this->_energyPoints = FT_DEFAULT_EP;
-	this->_attackDamage = FT_DEFAULT_AD;
-	this->_hitpointsMax = FT_DEFAULT_HP;
+	this->_hitpoints = FragTrap::_baseHitpoints;
+	this->_energyPoints = FragTrap::_baseEnergyPoints;
+	this->_attackDamage = FragTrap::_baseAttackDamage;
+	this->_hitpointsMax = FragTrap::_baseHitpoints;
 }
 
 FragTrap::FragTrap(const FragTrap &src): ClapTrap(src)

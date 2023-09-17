@@ -9,6 +9,10 @@
 
 class ScavTrap : virtual public ClapTrap
 {
+protected:
+	static const int	_baseHitpoints = ST_DEFAULT_HP;
+	static const int	_baseEnergyPoints = ST_DEFAULT_EP;
+	static const int	_baseAttackDamage = ST_DEFAULT_AD;
 public:
 	ScavTrap(); // Default constructor
 	ScavTrap(std::string name);
